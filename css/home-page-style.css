@@ -1,0 +1,199 @@
+@import url('reset.css');
+@import url('global.css');
+@import url('header-style.css');
+
+body {
+    background-color: var(--primary-color);
+    position: absolute;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
+
+/*slider*/
+
+.div-slider{
+    margin-top: 60px;
+    width: 100%;
+    height: 27.5vw;
+    text-align: center;
+}
+.slides-front {
+    padding: 0;
+    width: 100%;
+    display: block;
+    margin: auto;
+    position: relative;
+}
+    
+.slides-front * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+    
+.slides-front input { display: none; }
+    
+.slide-container { display: block; }
+    
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 32vw;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transition: all .7s ease-in-out 0.1s;
+}
+    
+.slide img {
+    width: 100%;
+}
+    
+.nav label {
+    width: 150px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+    
+.slide:hover + .nav label { opacity: 0.5; }
+    
+.nav label:hover { opacity: 1; }
+    
+.nav .next { right: 0; }
+    
+input:checked + .slide-container  .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out 0.1s;
+}
+    
+input:checked + .slide-container .nav label { display: block; }
+    
+.nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 11px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+    
+.nav-dots .nav-dot {
+    top: 28.5vw;
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 20px 0px 20px 20px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+    
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3 {
+background: #000000cc;
+}
+
+/*Container de cards*/
+
+.destaques {
+    margin-left: 15px;
+    height: fit-content;
+    text-align-last: left;
+}
+
+.destaques h1 {
+    font-family: 'The Nautigal', cursive;
+    font-size: 70px;
+    margin: 70px 0px 5% 0px;
+}
+
+.quadro {
+    margin: 0 3VW 0 3VW;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    margin-bottom: 110px;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 0 1rem 0 1rem;
+    width: calc(100% / 3 - 2%);
+    height: fit-content;
+    position: relative;
+    align-items: center;
+    transition: filter .5s ease-in-out;
+}
+
+.texto_anuncio {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.card h1 {
+    font-size: 20px;
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 13px;
+    color: rgb(151, 151, 151);
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+}
+
+.thumb {
+    position: relative;
+    width: 99%;
+    height: 60%;
+}
+
+.thumb img {
+    display: flex;
+    transition: ease-in-out 400ms;
+}
+
+.thumb .seg {
+    display: none;
+    transition: ease-in-out 400ms;
+}
+
+.thumb:hover .pri {
+    visibility: hidden;
+    opacity: 0;
+    position:absolute;
+}
+.thumb:hover .seg {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}

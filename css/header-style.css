@@ -1,0 +1,102 @@
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    min-height: 60px;
+    max-height: 60px;
+    background: #000;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.menu_text a{
+    position: relative;
+}
+
+.menu_text a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #818181;
+    ;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.menu_item a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+ul {
+    display: inline-block;
+}
+
+.menu_text {
+    position: absolute;
+    left: 1vw;
+    width: fit-content;
+}
+
+.menu_icons {
+    position: absolute;
+    right: 2%;
+}
+
+.menu_item {
+    margin:0 1rem;
+    display: inline-block;
+    transition: .5s;
+}
+
+.logo {
+    position: relative;
+    margin-top: 8px;
+}
+
+/*Accordion joias*/
+
+.hide {
+    display: none;   
+}
+
+.panel {
+    position: fixed;
+    left: 1rem;
+    top: 40px;
+    margin: 0 1rem;
+    width: fit-content;
+    border-radius: 0 0 15px 0;
+    background: #ffffff;
+    opacity: 93%;
+}
+
+.panel a {
+    font-size: 14px;
+}
+.panel li {
+    padding: 1px .75rem 6px .75rem;
+}
+
+.ultimo {
+    border-radius: 0 0 15px 0;
+}
+
+.panel li:hover {
+    background: #cdc7f6;
+}
